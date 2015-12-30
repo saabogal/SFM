@@ -61,8 +61,7 @@ pricer = makeReturns(price)
 price.ch = ts(price)
 price.ch = price.ch/lag(price.ch, -1) - 1
 
-# Apply harModel function which returns the estemites of an heterogeneous autoregressive model For realized volatility. 
-# The model is mainly used to forecast next day volatility based on the high frequency returns of the past.
+# Apply harModel function 
 rv = harModel(pricer, periods = c(1, 1, 1), periodsJ = c(1, 1, 1), RVest = c("rCov", 
                                                                              "rBPCov"), type = "HARRVCJ", transform = "sqrt")
 
