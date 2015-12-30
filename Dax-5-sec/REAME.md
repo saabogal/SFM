@@ -40,18 +40,18 @@ dax = read.csv(file = "Dax Data current.csv", sep = ",", head = TRUE, na.strings
 # Download data and transform it to a data frame
 dax = as.data.frame(dax)
 
-# Select my working vextors for 5 minutes daily realized variance
+# Select my working vectors for 5 minutes daily realized variance
 daxrv = dax$Realized.Variance..5.minute.
 
-# Convert the date strings to charachter vectors in order to transform
-# it to Date format.
+# Convert the date strings to charachter vectors in order to transform the data
+# to Date format.
 dax[, 1] = as.character(dax[, 1])
 daxt     = dax$DateID
 
 # Transform the time and date charachter vectors to a valid R format
 time = as.POSIXct(paste(daxt), format = "%Y-%m-%d")
 
-# set our xts elements Realized volatility 5 min
+# set our xts elements
 daxrv = xts(daxrv, order.by = time)
 
 # Returns 5 min
@@ -98,7 +98,7 @@ chart.TimeSeries(returns, type = "l", main = "DAX returns", ylab = "Return",
 
 dev.off()
 
-# 2008 Volatility
+# 2008 Volatility analysis
 daxrv8 = daxrv["2008"]
 
 # 2008 one minute lagged variance
