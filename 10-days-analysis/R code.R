@@ -74,8 +74,6 @@ plot(rv)
 
 dev.off()
 
- 
-
 
 
 
