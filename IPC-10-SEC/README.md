@@ -17,7 +17,7 @@ Author : Luis Alejandro Sarmiento Abogado
 
 Submitted : Tue, December 28 2015 by Luis Alejandro Sarmiento Abogado
 
-Datafile : IPC RV Data
+Datafile : IPC RV Data.csv
 ```
 ![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-10-SEC/IPCB1.png?raw=true)
 ![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-10-SEC/IPCB2.png?raw=true)
