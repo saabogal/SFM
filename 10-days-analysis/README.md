@@ -9,7 +9,7 @@ Name of QuantLet : SFM
 Published in : SFMLLN
 
 Description : 'Realized volatility analysis of mexican stock market IPC using harModel 
-predective function and som time series analysis' 
+predective function and some time series analysis' 
 
 Keywords : 'Volatility, graphical representation, time-series, log returns, variance'
 
@@ -19,7 +19,7 @@ Submitted : Tue, December 28 2015 by Luis Alejandro Sarmiento Abogado
 
 Datafile : IPC (5 MIN) 26_11-10_12
 ```
-![Q_pdf](SFM/10-days-analysis/IPCA1.pdf)
+(SFM/10-days-analysis/IPCA1.pdf)
 
 ```r
 
