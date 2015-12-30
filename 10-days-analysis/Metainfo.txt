@@ -1,4 +1,4 @@
-Name of QuantLet : SFM
+Name of QuantLet : SFEIPC10
 
 Published in : SFMLLN
 
