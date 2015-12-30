@@ -4,9 +4,9 @@
 
 ```yaml
 
-Name of QuantLet : SFM
+Name of QuantLet : SFEIPC10
 
-Published in : SFMLLN
+Published in : Statistics of Financial Markets
 
 Description : 'Realized volatility analysis of mexican stock market IPC using harModel 
 predective function and some time series analysis' 
