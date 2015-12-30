@@ -8,8 +8,8 @@ Name of QuantLet : SFERV6
 
 Published in : SFE
 
-Description : 'Realized variance analysis and graphical representation of 10 seconds intraday highfrequency realized variance
-from the Mexican stock market IPC and comparison with it's lagged subsample' 
+Description : 'Realized variance analysis and graphical representation of 10 seconds intraday highfrequency
+realized variance from the Mexican stock market IPC and comparison with it's lagged subsample' 
 
 Keywords : 'Volatility, graphical representation, time-series, log returns, variance'
 
