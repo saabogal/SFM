@@ -26,9 +26,6 @@ Datafile : IPC RV Data.csv
 
 
 ```r
-# ipc realized variance, observed and predicted volatility, price
-# movements and lagged comparisons.
-
 # Clear enviorenment
 graphics.off()
 rm(list = ls())
@@ -43,7 +40,7 @@ ipc = read.csv(file = "IPC RV Data.csv", sep = ",", head = TRUE, na.strings = c(
 # Download data and transform it to a data frame
 ipc = as.data.frame(ipc)
 
-# Select my working vextors for 5 minutes daily realized variance
+# Select my working vectors for 5 minutes daily realized variance
 ipcrv = ipc$Realized.Variance..10.minute.
 
 # Convert the date strings to charachter vectors in order to transform
@@ -54,7 +51,7 @@ ipct     = ipc$DateID
 # Transform the time and date charachter vectors to a valid R format
 time = as.POSIXct(paste(ipct), format = "%Y-%m-%d")
 
-# set our xts elements Realized volatility 5 min
+# set our xts elements
 ipcrv = xts(ipcrv, order.by = time)
 
 # Returns
@@ -99,7 +96,7 @@ chart.TimeSeries(returns, type = "l", main = "IPC returns", ylab = "Return",
 
 dev.off()
 
-# 2008 Volatility
+# 2008 Volatility analysis
 ipcrv8 = ipcrv["2008"]
 
 # 2008 one minute lagged variance
@@ -134,11 +131,6 @@ chart.TimeSeries(diff, col = "purple", type = "h", main = " Difference in lagged
                  ylab = "RV", xlab = "Time")
 
 dev.off()
-
-
-
-
-
 
 ```
 
