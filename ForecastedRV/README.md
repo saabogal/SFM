@@ -8,7 +8,8 @@ Name of QuantLet : SFERV
 
 Published in : SFE
 
-Description : 'Realized volatility analysis using harModel of Dow Jones, CAC 50, FTSE 100 and Euro-USD exchange market' 
+Description : 'Realized volatility analysis using harModel of Dow Jones, CAC 50, FTSE 100 and Euro-USD
+exchange market' 
 
 Keywords : 'Volatility, graphical representation, time-series, log returns, variance'
 
