@@ -8,7 +8,7 @@ Name of QuantLet : SFERV5
 Published in : SFE
 
 Description : 'Realized variance analysis and graphical representation of 5 seconds intraday highfrequency realized variance
-from the Mexica stock market IPC and comparison with it's lagged subsample' 
+from the Mexican stock market IPC and comparison with it's lagged subsample' 
 
 Keywords : 'Volatility, graphical representation, time-series, log returns, variance'
 
@@ -25,9 +25,6 @@ Datafile : IPC RV Data.csv
 
 
 ```r
-# ipc realized variance, observed predicted volatility and price
-# movements
-
 # Clear enviorenment
 graphics.off()
 rm(list = ls())
@@ -43,7 +40,7 @@ ipc = read.csv(file = "IPC RV Data.csv", sep = ",", head = TRUE, na.strings = c(
 # Download data and transform it to a data frame
 ipc = as.data.frame(ipc)
 
-# Select my working vextors for 5 minutes daily realized variance
+# Select my working vectors for 5 minutes daily realized variance
 ipcrv = ipc$Realized.Variance..5.minute.
 
 # Convert the date strings to charachter vectors in order to transform
@@ -101,7 +98,7 @@ chart.TimeSeries(returns, type = "l", main = "IPC returns", ylab = "Return",
 
 dev.off()
 
-# 2008 Volatility
+# 2008 Volatility analysis
 ipcrv8 = ipcrv["2008"]
 
 # 2008 one minute lagged variance
