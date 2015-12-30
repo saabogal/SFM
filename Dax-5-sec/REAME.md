@@ -25,9 +25,6 @@ Datafile : Dax Data current.csv
 
 
 ```r
-# Dax realized variance, observed and predicted volatility and price
-# movements
-
 # Clear enviorenment
 graphics.off()
 rm(list = ls())
