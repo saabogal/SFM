@@ -3,12 +3,13 @@
 ## [<img src="https://github.com/QuantLet/Styleguide-and-Validation-procedure/blob/master/pictures/qloqo.png" alt="Visit QuantNet">](http://quantlet.de/) **Quiz 10** [<img src="https://github.com/QuantLet/Styleguide-and-Validation-procedure/blob/master/pictures/QN2.png" width="60" alt="Visit QuantNet 2.0">](http://quantlet.de/d3/ia)
 
 ```yaml
-Name of QuantLet : SFERV5
+
+Name of QuantLet : SFERV6
 
 Published in : SFE
 
-Description : 'Realized variance analysis and graphical representation of 5 seconds intraday highfrequency realized variance
-from the Mexica stock market IPC and comparison with it's lagged subsample' 
+Description : 'Realized variance analysis and graphical representation of 10 seconds intraday highfrequency realized variance
+from the Mexican stock market IPC and comparison with it's lagged subsample' 
 
 Keywords : 'Volatility, graphical representation, time-series, log returns, variance'
 
@@ -16,17 +17,17 @@ Author : Luis Alejandro Sarmiento Abogado
 
 Submitted : Tue, December 28 2015 by Luis Alejandro Sarmiento Abogado
 
-Datafile : IPC RV Data.csv
+Datafile : IPC RV Data
 ```
-![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-10-sec/IPCB1.png?raw=true)
-![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-10-sec/IPCB2.png?raw=true)
-![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-10-sec/IPCB3.png?raw=true)
-![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-10-sec/IPCB4.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-10-SEC/IPCB1.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-10-SEC/IPCB2.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-10-SEC/IPCB3.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-10-SEC/IPCB4.png?raw=true)
 
 
 ```r
-# ipc realized variance, observed predicted volatility and price
-# movements
+# ipc realized variance, observed and predicted volatility, price
+# movements and lagged comparisons.
 
 # Clear enviorenment
 graphics.off()
@@ -37,14 +38,13 @@ library(highfrequency)
 library(PerformanceAnalytics)
 
 # Download file
-ipc = read.csv(file = "IPC RV Data.csv", sep = ",", head = TRUE, na.strings = c("", 
-                                                                                "NA"))
+ipc = read.csv(file = "IPC RV Data.csv", sep = ",", head = TRUE, na.strings = c("NA"))
 
 # Download data and transform it to a data frame
 ipc = as.data.frame(ipc)
 
 # Select my working vextors for 5 minutes daily realized variance
-ipcrv = ipc$Realized.Variance..5.minute.
+ipcrv = ipc$Realized.Variance..10.minute.
 
 # Convert the date strings to charachter vectors in order to transform
 # it to Date format.
@@ -57,25 +57,23 @@ time = as.POSIXct(paste(ipct), format = "%Y-%m-%d")
 # set our xts elements Realized volatility 5 min
 ipcrv = xts(ipcrv, order.by = time)
 
-# Returns 5 min
+# Returns
 returns = xts(ipc[, 4], order.by = time)
 
-# 5 minutes with one minute subsampling
-ipcrvs = xts(ipc[, 5], order.by = time)
+# 10 minutes with one minute subsampling
+ipcrvs = xts(ipc[, 7], order.by = time)
 
 # Eliminate NA's
-ipcrv  = ipcrv[complete.cases(ipcrv)]
+ipcrv = ipcrv[complete.cases(ipcrv)]
 ipcrvs = ipcrvs[complete.cases(ipcrvs)]
 
 # Apply har model
 ipcm = harModel(data = ipcrv, periods = c(1, 5, 22), RVest = c("rCov"), 
                 type = "HARRV", h = 1, transform = NULL)
 
-# Plot observed and forecasted volatility for the given time frame
-png(filename = "IPC1.png")
-
+# Plot observed and forecasted volatility
+png(filename = "IPCB1.png")
 par(mfrow = c(2, 1))
-
 plot(ipcm)
 
 # Plot realized variance
@@ -92,7 +90,7 @@ chart.TimeSeries(ipcrv, type = "l", main = "IPC volatility", ylab = "Return",
 dev.off()
 
 # plot returns
-png(filename = "IPC2.png")
+png(filename = "IPCB2.png")
 
 chart.TimeSeries(returns, type = "l", main = "IPC returns", ylab = "Return", 
                  col = "black", grid.color = "yellow", period.areas = cycles.dates, 
@@ -112,16 +110,15 @@ ipcm8 = harModel(data = ipcrv8, periods = c(1, 5, 22), RVest = c("rCov"),
                  type = "HARRV", h = 1, transform = NULL)
 
 # Plot harModel 2008
-png(filename = "IPC3.png")
+png(filename = "IPCB3.png")
 
 plot(ipcm8, cwd = 0.5, bg = "pch")
 
 dev.off()
+
 # Plot realized variance and a volatility approx.
-png(filename = "IPC4.png")
-
+png(filename = "IPCB4.png")
 par(mfrow = c(3, 1))
-
 chart.TimeSeries(ipcrv8, col = "red", type = "h", main = "5 minutes realized volatility", 
                  ylab = "RV", xlab = "Time")
 
@@ -142,8 +139,6 @@ dev.off()
 
 
 
-
-  
 
 ```
 
