@@ -50,11 +50,14 @@ summary(FTSE)
 summary(UE)
 
 # PLOTS
-pdf(file = "DJ1.pdf")
-par(mfrow = c(2, 2))
+png(file = "DJ1.png")
+par(mfrow = c(2, 1))
 
 plot(DJ)
 plot(CAC)
+
+png(file = "DJ2.png")
+par(mfrow = c(2, 1))
 plot(FTSE)
 plot(UE)
 
