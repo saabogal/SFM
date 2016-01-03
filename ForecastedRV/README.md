@@ -19,7 +19,7 @@ Submitted : Tue, December 28 2015 by Luis Alejandro Sarmiento Abogado
 
 Datafile : Null
 ```
-![Q_image](https://github.com/saabogal/SFM/blob/master/ForecastedRV/DJ1.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/ForecastedRV/DJ1A.png?raw=true)
 ![Q_image](https://github.com/saabogal/SFM/blob/master/ForecastedRV/DJ2.png?raw=true)
 
 
