@@ -18,10 +18,10 @@ Submitted : Tue, December 28 2015 by Luis Alejandro Sarmiento Abogado
 
 Datafile : IPC RV Data.csv
 ```
-![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-5-sec/IPC1.png?raw=true)
-![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-5-sec/IPC2.png?raw=true)
-![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-5-sec/IPC3.png?raw=true)
-![Q_image](https://github.com/saabogal/SFM/blob/master/IPC-5-sec/IPC4.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/SFErealizedVolatilityIPC/IPC1.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/SFErealizedVolatilityIPC/IPC2.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/SFErealizedVolatilityIPC/IPC3.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/SFErealizedVolatilityIPC/IPC4.png?raw=true)
 
 
 ```r
