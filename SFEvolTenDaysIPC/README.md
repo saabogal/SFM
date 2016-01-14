@@ -19,9 +19,9 @@ Submitted : Tue, December 28 2015 by Luis Alejandro Sarmiento Abogado
 
 Datafile : IPC (5 MIN) 26_11-10_12
 ```
-![Q_image](https://github.com/saabogal/SFM/blob/master/10-days-analysis/IPCA1.png?raw=true)
-![Q_image](https://github.com/saabogal/SFM/blob/master/10-days-analysis/IPCA2.png?raw=true)
-![Q_image](https://github.com/saabogal/SFM/blob/master/10-days-analysis/IPCA3.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/SFEvolTenDaysIPC/IPCA1.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/SFEvolTenDaysIPC/IPCA2.png?raw=true)
+![Q_image](https://github.com/saabogal/SFM/blob/master/SFEvolTenDaysIPC/IPCA3.png?raw=true)
 
 ```r
 
